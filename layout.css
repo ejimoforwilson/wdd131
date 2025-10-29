@@ -1,0 +1,85 @@
+/* Reset some default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: grid;
+}
+
+/* Header style */
+header {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  display: flex;
+}
+.bac {
+    float: left;
+    gap: 50px;
+}
+
+/* Navigation bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+.navbar{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+}
+
+/* Main section layout */
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  text-align:center ;
+  background-color: #eaeaea;
+}
+
+/* Main content */
+.main-content {
+  flex: 3;
+  background-color: white;
+  padding: 100px;
+
+  margin-right: 10px;
+}
+
+/* Aside content */
+aside {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 10px;
+}
+

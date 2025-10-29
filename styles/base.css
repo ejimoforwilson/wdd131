@@ -1,0 +1,150 @@
+/* ---------- Page Setup ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #222;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #1f4e8c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header span {
+  color: #ffd700;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  background-color: #3a3a3a;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.7rem 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* ---------- Main Layout ---------- */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ---------- About Me Card ---------- */
+.about {
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+  background-color: #1f4e8c;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-content img {
+  width: 150px;
+  border-radius: 5px;
+  margin-left: 1rem;
+}
+
+.about h3 {
+  text-align: center;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.about hr {
+  width: 80%;
+  border: 0;
+  border-top: 1px solid #bbb;
+  margin: 0.5rem auto;
+}
+
+.location {
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.location img {
+  width: 120px;
+  border: 1px solid #bbb;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* ---------- Web Dev Resources Card ---------- */
+.resources {
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.resources h2 {
+  background-color: #1f4e8c;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.resources ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.resources li {
+  margin: 0.4rem 0;
+}
+
+.resources a {
+  color: #1f4e8c;
+  text-decoration: none;
+}
+
+.resources a:hover {
+  color: #ffd700;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #1f4e8c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+footer span {
+  color: #ffd700;
+}
+
