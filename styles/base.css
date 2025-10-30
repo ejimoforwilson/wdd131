@@ -48,7 +48,7 @@ main {
 }
 
 /* ---------- About Me Card ---------- */
-.about {
+.card {
   border: 1px solid #bbb;
   border-radius: 10px;
   background-color: white;
@@ -64,7 +64,7 @@ main {
   border-radius: 10px 10px 0 0;
 }
 
-.about-content {
+.card-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
