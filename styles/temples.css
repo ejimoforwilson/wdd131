@@ -57,7 +57,7 @@ main h2 {
 
 .gallery figure {
   margin: 0;
-  display: grid;
+  display: flex;
   justify-content: center;
   grid-template-columns: repeat(6, 3fr); 
 
