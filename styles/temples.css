@@ -63,7 +63,7 @@ main h2 {
 }
 
 .gallery img {
-  width: 350px;   /* bigger image */
+  width: 500px;   /* bigger image */
   max-width: 100%;
   height: auto;
   border-radius: 5px;
