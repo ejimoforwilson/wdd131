@@ -23,6 +23,7 @@ header h1 {
   font-size: 1.8rem;
   font-weight: bold;
 }
+
 nav a {
   text-decoration: none;
   color: white;
@@ -47,35 +48,33 @@ main h2 {
 
 /* ======= Image Gallery ======= */
 .gallery {
-  display:grid;
-  grid-template-columns: repeat(3, 1fr); 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem auto;
- 
-  
+  justify-items: center;
 }
 
 .gallery figure {
-  margin: 0;
   display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(6, 3fr); 
-
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
 }
 
 .gallery img {
-  width: 200px;
-  max-width: 300px;
+  width: 350px;   /* bigger image */
+  max-width: 100%;
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .gallery figcaption {
   margin-top: 0.5rem;
   color: #7a0dcf;
   font-weight: 500;
- 
 }
 
 /* ======= Footer ======= */
@@ -94,3 +93,4 @@ footer p {
 footer span {
   color: #ffb3ff;
 }
+
