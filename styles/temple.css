@@ -22,7 +22,12 @@ header h1 {
   font-size: 1.8em;
   margin: 0;
 }
-
+/* ======= Navigation ======= */
+nav {
+  display: flex; /* ✅ Flexbox added directly on nav */
+  align-items: center;
+  justify-content: center;
+}
 nav ul {
   list-style: none;
   margin: 0;
@@ -116,4 +121,7 @@ footer {
     width: 90%;
   }
 }
-
+@media screen and (max-width: 480px) {}
+  body {
+    background-color: #e8e8ff; /* slightly different for small screens */
+  }
