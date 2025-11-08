@@ -10,7 +10,7 @@ body {
 
 /* ======= Header ======= */
 header {
-  background-color: #4b006e; /* purple bar */
+  background-color:blue; /* purple bar */
   color: white;
   display: flex;
   align-items: center;
@@ -21,6 +21,7 @@ header {
 header h1 {
   font-size: 1.8em;
   margin: 0;
+
 }
 /* ======= Navigation ======= */
 nav {
@@ -57,7 +58,7 @@ main {
 /* ======= Temple Gallery ======= */
 .gallery {
   display: grid;
-  
+ grid-template-columns:repeat(3, 1fr);
   gap: 20px;
 }
 
