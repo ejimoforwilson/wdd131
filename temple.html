@@ -1,44 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This is a picture album project which am doing in WDD131 which comprise with temples picture">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Temple picture album for WDD131">
   <meta name="author" content="Ejimofor Wilson">
   <title>Temple Album</title>
 
-  <!-- ✅ Google Fonts preconnect links -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <!-- ✅ Google Fonts stylesheet link -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- ✅ Scripts and CSS -->
-  <script src="scripts/temples.js" defer></script>
+  <!-- Core CSS -->
   <link rel="stylesheet" href="styles/temples.css">
+  <!-- Optional large-screen overrides (keeps core CSS smaller) -->
   <link rel="stylesheet" href="styles/temples-large.css">
-</head>
 
+  <!-- JavaScript (deferred) -->
+  <script src="scripts/temples.js" defer></script>
+</head>
 <body>
   <header>
     <h1>Temple Album</h1>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Old</a>
-      <a href="#">New</a>
-      <a href="#">Large</a>
-      <a href="#">Small</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <h2>Home</h2>
-    <section class="gallery">
 
+    <section class="gallery" aria-label="Temple gallery">
       <figure>
-        <img src="images/accra.jpg" alt="accra temple">
-        <figcaption>accra Temple</figcaption>
+        <img src="images/accra.jpg" alt="Accra Temple">
+        <figcaption>Accra Temple</figcaption>
       </figure>
 
       <figure>
@@ -50,6 +51,7 @@
         <img src="images/salt-lake.jpg" alt="Salt Lake Temple">
         <figcaption>Salt Lake Temple</figcaption>
       </figure>
+
       <figure>
         <img src="images/missouri.jpg" alt="Missouri Temple">
         <figcaption>Missouri Temple</figcaption>
@@ -79,14 +81,14 @@
         <img src="images/oakland.jpg" alt="Oakland Temple">
         <figcaption>Oakland Temple</figcaption>
       </figure>
-
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> 🎄 Ejimofor Wilson 🎄 Nigeria</p>
-    <p>Last Modification: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> Ejimofor Wilson</p>
+    <p>Last modification: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>
+
 
