@@ -1,106 +1,27 @@
-/* ======= General Styles ======= */
-body {
-    font-family: 'roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-    text-align: center;
+/* Larger screens can override (optional) */
+
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-h1 {
-    margin: 20px 0;
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  figure img {
+    height: 240px;
+  }
 }
 
-/* ======= Header ======= */
-header {
-    background-color: #4b006e;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 30px;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-}
-
-/* ======= Navigation ======= */
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;       /* Flexbox here */
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ffd700;  /* gold hover effect */
-}
-
-/* ======= Image Gallery ======= */
-.gallery {
-    display: grid;  /* Grid layout */
-    grid-template-columns:repeat(3,1fr) ;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 10px;
-}
-
-.gallery figure {
-    margin: 0;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.gallery figure:hover {
-    transform: scale(1.05);
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-figcaption {
-    margin-top: 8px;
-    color: #7a0dcf;
-}
-
-/* ======= Footer ======= */
-footer {
-    background-color: #4b006e;
-    color: white;
-    padding: 10px;
-    font-size: 0.9rem;
-}
-
-/* ======= Media Queries ======= */
-@media (max-width: 900px) {
-    nav ul {
-        flex-direction: column;  /* Stack nav vertically */
-        gap: 10px;
-    }
-
-    header {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr;  /* Single column gallery */
-    }
-}

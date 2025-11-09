@@ -1,11 +1,15 @@
-/* ======= General Styles ======= */
+/* Root colors */
 :root {
   --accent: #4b006e;
   --light-bg: #e8e8ff;
 }
 
-* { box-sizing: border-box; }
+/* General reset */
+* {
+  box-sizing: border-box;
+}
 
+/* Body styling */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -15,9 +19,9 @@ body {
   text-align: center;
 }
 
-/* ======= Header ======= */
+/* Header */
 header {
-  background-color: blue;
+  background-color: var(--accent);
   color: white;
   display: flex;
   align-items: center;
@@ -26,30 +30,27 @@ header {
 }
 
 header h1 {
-  font-size: 1.8rem;
   margin: 0;
+  font-size: 1.8rem;
 }
 
-/* ======= Navigation ======= */
-/* note: HTML uses a ul inside nav */
+/* Navigation */
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: none;
   display: flex;
+  padding: 0;
+  margin: 0;
   gap: 12px;
-  align-items: center;
 }
 
 nav ul li a {
-  display: inline-block;
-  padding: 8px 12px;
-  text-decoration: none;
   background-color: var(--light-bg);
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
   color: #000;
   font-weight: bold;
-  border-radius: 6px;
-  transition: transform 0.15s ease, color 0.15s ease;
+  transition: transform 0.2s ease;
 }
 
 nav ul li a:hover {
@@ -57,96 +58,51 @@ nav ul li a:hover {
   color: #ffd700;
 }
 
-/* ======= Main Section ======= */
+/* Main Layout */
 main {
   padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* ======= Temple Gallery ======= */
+/* Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on large screens */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  align-items: start;
-  padding: 10px;
-  justify-content: center;
 }
 
 figure {
   margin: 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  width: 100%; /* let grid control width */
-  overflow: hidden;
   border-radius: 6px;
-  background: #fff;
-  transition: transform 0.2s ease;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease;
 }
 
 figure:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
 figure img {
-  display: block;
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
 figcaption {
+  padding: 12px;
   background-color: var(--accent);
   color: white;
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: bold;
   text-align: left;
+  font-size: 1rem;
 }
 
-/* ======= Footer ======= */
+/* Footer */
 footer {
+  margin-top: 40px;
   background-color: var(--accent);
   color: white;
   padding: 15px;
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9rem;
 }
 
-/* ======= Responsive Design ======= */
-/* Medium screens: 2 columns */
-@media (max-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Small screens: 1 column, stack nav */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr;
-  }
-
-  figure img {
-    height: 220px; /* slightly taller on narrow screens if you want */
-  }
-}
-
-/* Very small screens cosmetic change */
-@media (max-width: 480px) {
-  body {
-    background-color: var(--light-bg);
-  }
-}
