@@ -64,7 +64,17 @@ main {
   max-width: 1200px;
   margin: auto;
 }
-
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+ .hamburger {
+    display: block;  /* <-- show button on small screens */
+  }
 /* Gallery */
 .gallery {
   display: grid;
