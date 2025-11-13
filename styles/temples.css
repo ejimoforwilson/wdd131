@@ -26,7 +26,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 15px 20px;
 }
 
 header h1 {
@@ -34,13 +34,28 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* Navigation */
+/* Hamburger button (mobile) */
+.hamburger {
+  display: block;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation - mobile hidden by default, shown when nav has .show */
 nav ul {
   list-style-type: none;
-  display: flex;
-  padding: 0;
+  display: none;
+  flex-direction: column;
+  padding: 10px 20px;
   margin: 0;
-  gap: 12px;
+  gap: 8px;
+}
+
+nav.show ul {
+  display: flex;
 }
 
 nav ul li a {
@@ -50,6 +65,9 @@ nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
   transition: transform 0.2s ease;
 }
 
@@ -64,21 +82,11 @@ main {
   max-width: 1200px;
   margin: auto;
 }
-.hamburger {
-  display: none;
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
- .hamburger {
-    display: block;  /* <-- show button on small screens */
-  }
+
 /* Gallery */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -91,13 +99,14 @@ figure {
 }
 
 figure:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 figure img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 figcaption {
@@ -115,4 +124,3 @@ footer {
   color: white;
   padding: 15px;
 }
-

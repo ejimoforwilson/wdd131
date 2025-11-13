@@ -14,23 +14,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
   <!-- CSS Files -->
-   <link rel="stylesheet" href="styles/temples.css">
-   <link rel="stylesheet" href="styles/temples-large.css">
-
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
 
   <!-- JavaScript -->
-   <script src="scripts/temples.js" defer></script>
+  <script src="scripts/temples.js" defer></script>
 </head>
 
 <body>
   <header>
     <h1>Temple Album</h1>
-        <!-- HAMBURGER BUTTON -->
-    <button class="hamburger" id="hamburger">
+
+    <!-- HAMBURGER BUTTON -->
+    <button class="hamburger" id="hamburger" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
       ☰
     </button>
 
-    <nav>
+    <!-- NOTE: added id="nav" so JS can select it -->
+    <nav id="nav">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Old</a></li>
@@ -86,8 +87,8 @@
       </figure>
 
       <figure>
-        <img src="images/nauvoo.jpg" alt="nauvoo Temple">
-        <figcaption>nauvoo Temple</figcaption>
+        <img src="images/nauvoo.jpg" alt="Nauvoo Temple">
+        <figcaption>Nauvoo Temple</figcaption>
       </figure>
     </section>
   </main>
