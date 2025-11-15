@@ -54,51 +54,17 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
   },
+{
+    templeName: "johnersbourg",
+    location: "johnersbourg, south africa",
+    dedicated: "1888, May, 21",
+    area: 74792,
+    imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+  },
 
-  // ---------------------------
   // YOUR 3 ADDITIONAL TEMPLES
   // ---------------------------
-  {
-    templeName: "Accra Ghana",
-    location: "Accra, Ghana",
-    dedicated: "2004, January, 11",
-    area: 17500,
-    imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana/accra-ghana-temple-lds-144857-wallpaper.jpg"
-  },
-  {
-    templeName: "Rome Italy",
-    location: "Rome, Italy",
-    dedicated: "2019, March, 12",
-    area: 40000,
-    imageUrl:
-      "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy/rome-italy-temple-lds-2082929-wallpaper.jpg"
-  },
-{
-  templeName: "Johannesburg South Africa",
-  location: "Johannesburg, South Africa",
-  dedicated: "1985, August, 24",
-  area: 19350,
-  imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-lds-1028008-wallpaper.jpg"
-},
-{
-  templeName: "Paris France",
-  location: "Le Chesnay, France",
-  dedicated: "2017, May, 21",
-  area: 44175,
-  imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-1833697.jpg"
-},
-{
-  templeName: "Hong Kong China",
-  location: "Hong Kong, China",
-  dedicated: "1996, May, 26",
-  area: 51921,
-  imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hong-kong-china/400x250/hong-kong-lds-temple-1077063-wallpaper.jpg"
-}
-
 ]
 
 // -----------------------------------------------
