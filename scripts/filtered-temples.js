@@ -81,6 +81,22 @@ const temples = [
   area: 19350,
   imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/johannesburg-south-africa/400x250/johannesburg-south-africa-temple-lds-1028008-wallpaper.jpg"
+},
+{
+  templeName: "Paris France",
+  location: "Le Chesnay, France",
+  dedicated: "2017, May, 21",
+  area: 44175,
+  imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-1833697.jpg"
+},
+{
+  templeName: "Hong Kong China",
+  location: "Hong Kong, China",
+  dedicated: "1996, May, 26",
+  area: 51921,
+  imageUrl:
+    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/hong-kong-china/400x250/hong-kong-lds-temple-1077063-wallpaper.jpg"
 }
 
 ]
