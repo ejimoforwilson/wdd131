@@ -62,7 +62,13 @@ const temples = [
     imageUrl:
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
   },
-
+  {
+    templeName: "accra ghana",
+    location: "accra, Utah, United States",
+    dedicated: "2015, June, 7",
+    area: 96630,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+  },
   // YOUR 3 ADDITIONAL TEMPLES
   // ---------------------------
 ]
