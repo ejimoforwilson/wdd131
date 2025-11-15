@@ -64,10 +64,33 @@ const temples = [
   },
   {
     templeName: "accra ghana",
-    location: "accra, Utah, United States",
+    location: "accra, ghana",
     dedicated: "2015, June, 7",
     area: 96630,
     imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+  },
+  {
+    templeName: "france",
+    location: "france",
+    dedicated: "2020, May, 2",
+    area: 6861,
+    imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+  },
+  {
+    templeName: "rome",
+    location: "rome",
+    dedicated: "1983, December, 2",
+    area: 116642,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+  },
+  {
+    templeName: "brazil,santiago ",
+    location: "santiago",
+    dedicated: "1974, November, 19",
+    area: 156558,
+    imageUrl:
+      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
   // YOUR 3 ADDITIONAL TEMPLES
   // ---------------------------
