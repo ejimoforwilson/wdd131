@@ -92,6 +92,7 @@ const temples = [
     imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
   },
+ 
   // YOUR 3 ADDITIONAL TEMPLES
   // ---------------------------
 ]
