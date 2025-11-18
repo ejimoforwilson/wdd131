@@ -77,6 +77,19 @@ header nav ul li a:hover {
   justify-content: center;
   gap: 10px;
 }
+/* MOBILE: Show SVG only on small screens */
+.weather-svg {
+  display: block;
+  width: 80px;
+  margin: 10px auto;
+}
+
+/* Hide SVG on larger screens */
+@media (min-width: 768px) {
+  .weather-svg {
+    display: none;
+  }
+}
 
 /* Pseudo-element example for large view */
 .weather h2::after {
