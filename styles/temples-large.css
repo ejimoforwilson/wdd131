@@ -1,8 +1,7 @@
-/* Breakpoint: show nav as horizontal for medium / large screens */
-@media (min-width: 700px) {
-  /* hide hamburger on larger screens */
-  .hamburger {
-    display: none;
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: lightgray;
   }
 
   /* show nav inline */
@@ -27,5 +26,3 @@
     gap: 20px;
     padding: 20px;
   }
-}
-
