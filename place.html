@@ -1,1 +1,65 @@
-c
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A place webpage with hero image, weather, and information sections">
+  <meta name="author" content="Ejimofor Wilson">
+  <title>Place Page</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/places.css">
+  <link rel="stylesheet" href="styles/places-large.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/places.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Paradise Island</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Attractions</a></li>
+        <li><a href="#">Weather</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <picture>
+        <source media="(max-width: 480px)" srcset="images/hero-small.webp">
+        <source media="(max-width: 1024px)" srcset="images/hero-medium.webp">
+        <img src="images/hero-large.webp" alt="Scenic view of Paradise Island">
+      </picture>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info">
+      <h2>About Paradise Island</h2>
+      <p>Paradise Island is known for its pristine beaches, lush forests, and friendly locals. Perfect for a relaxing vacation!</p>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Weather</h2>  <!-- removed the span for points -->
+      <p>Temperature: <span id="temperature">8</span>°C</p>
+      <p>Wind Speed: <span id="wind-speed">15</span> km/h</p>
+      <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+
+      <!-- SVG WEATHER ICON (MOBILE ONLY) -->
+      <img class="weather-svg" src="images/weather-sunny.svg" alt="Sunny weather">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Ejimofor Wilson</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>
