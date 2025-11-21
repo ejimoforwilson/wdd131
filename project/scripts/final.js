@@ -29,5 +29,9 @@ bookmarks.forEach(dish => {
   li.textContent = dish;
   bookmarkList.appendChild(li);
 });
+document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thank you for contacting us!");
+});
 
 
