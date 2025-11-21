@@ -1,64 +1,33 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
-// Welcome message
-const welcome = document.getElementById("welcome");
-if (welcome) {
-  welcome.innerHTML =
-  `Welcome! Today is ${new Date().toLocaleDateString()}.`;
-}
+// Get all bookmark buttons
+const bookmarkButtons = document.querySelectorAll(".bookmark-btn");
 
-// Bookmark feature
-const bookmarks = JSON.parse(localStorage.getItem("myBookmarks") || "[]");
-const listEl = document.getElementById("bookmarkList");
-const addBtn = document.getElementById("addBookmarkBtn");
+// Listen for clicks
+bookmarkButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    let dish = button.getAttribute("data-dish");
 
-function save() {
-  localStorage.setItem("myBookmarks", JSON.stringify(bookmarks));
-}
+    // Get current bookmarks from localStorage
+    let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
 
-function showBookmarks() {
-  if (!listEl) return;
-  listEl.innerHTML = bookmarks.length === 0
-    ? "<li>No bookmarks yet</li>"
-    : bookmarks.map((b, i) =>
-      `<li>${b.title} -
-       <a href="${b.url}" target="_blank">Visit</a>
-       <button onclick="removeBookmark(${i})">Remove</button>
-      </li>`).join("");
-}
-
-function addBookmark() {
-  const title = prompt("Title:");
-  const url = prompt("URL starting with http:");
-
-  if (!title || !url.startsWith("http")) {
-    alert("Invalid input");
-    return;
-  }
-
-  bookmarks.push({ title, url });
-  save();
-  showBookmarks();
-}
-
-function removeBookmark(index) {
-  bookmarks.splice(index, 1);
-  save();
-  showBookmarks();
-}
-
-if (addBtn) addBtn.addEventListener("click", addBookmark);
-showBookmarks();
-
-// Contact form validation
-const form = document.getElementById("contactForm");
-if (form) {
-  form.addEventListener("submit", (e) => {
-    if (!form.checkValidity()) {
-      alert("Fill correctly!");
-      e.preventDefault();
+    // Check if already bookmarked
+    if (!bookmarks.includes(dish)) {
+      bookmarks.push(dish); // add dish
+      localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+      alert(`${dish} bookmarked!`);
     } else {
-      alert("Message sent!");
+      alert(`${dish} is already bookmarked.`);
     }
   });
-}
+});
+const bookmarkList = document.getElementById("bookmark-list");
+let bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || [];
+
+bookmarks.forEach(dish => {
+  let li = document.createElement("li");
+  li.textContent = dish;
+  bookmarkList.appendChild(li);
+});
+
+
