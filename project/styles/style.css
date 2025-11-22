@@ -29,10 +29,41 @@ nav a.active {
 }
 
 /* Hero placeholder */
-.hero {
-  background: #ccc;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.food-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.food-gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 20px;
+}
+
+.food-gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.food-card {
+  text-align: center;
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#likeBtn {
+  padding: 10px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
 }
