@@ -88,5 +88,62 @@ likeBtn.addEventListener("click", () => {
     alert("Thanks for your first like! ❤️");
   }
 });
+// ========================
+// final.js
+// ========================
+
+// 1️⃣ Object example
+const siteInfo = {
+  author: "Ejimofor Wilson",
+  year: new Date().getFullYear(),
+  lastUpdated: document.lastModified
+};
+
+// 2️⃣ Array and array method example
+const pages = ["Home", "About", "Contact", "References"];
+pages.push("FAQ"); // Adding an extra page dynamically
+
+// 3️⃣ Function to update footer year and last modified
+function updateFooter() {
+  const yearEl = document.getElementById("year");
+  const lastModifiedEl = document.getElementById("lastModified");
+
+  if (yearEl) yearEl.textContent = `${siteInfo.year}`; // Template literal
+  if (lastModifiedEl) lastModifiedEl.textContent = `${siteInfo.lastUpdated}`; // Template literal
+}
+
+// 4️⃣ Function to greet user stored in localStorage
+function greetUser() {
+  const username = localStorage.getItem("username") || "Guest";
+
+  const greetingEl = document.getElementById("greeting");
+  if (greetingEl) {
+    greetingEl.textContent = `Hello, ${username}! Welcome back to the ${pages[0]} page.`; // Using array + template literal
+  }
+}
+
+// 5️⃣ Conditional branching example
+function checkYear() {
+  if (siteInfo.year === 2025) {
+    console.log("The current year is 2025.");
+  } else {
+    console.log("This website is being viewed in another year.");
+  }
+}
+
+// 6️⃣ Function to store a sample user in localStorage
+function saveUser(name) {
+  localStorage.setItem("username", name);
+}
+
+// ========================
+// Run functions on page load
+// ========================
+updateFooter();
+greetUser();
+checkYear();
+
+// Optional: store a user for demo purposes
+saveUser("Wilson");
 
 
