@@ -1,0 +1,1 @@
+document.getElementbyId("year") textcontent newdate("date");
