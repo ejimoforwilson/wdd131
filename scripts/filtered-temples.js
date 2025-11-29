@@ -119,26 +119,11 @@ function displayTemples(list) {
     container.appendChild(card);
   });
 }
+document.getElementById("home").addEventListener("click", () => filterTemples("home"));
+document.getElementById("old").addEventListener("click", () => filterTemples("old"));
+document.getElementById("new").addEventListener("click", () => filterTemples("new"));
+document.getElementById("large").addEventListener("click", () => filterTemples("large"));
 
-// Display all temples on load
-displayTemples(temples);
-
-// -----------------------------------------------
-// FILTER BUTTONS
-// -----------------------------------------------
-document.querySelector("#home").addEventListener("click", () => displayTemples(temples));
-document.querySelector("#old").addEventListener("click", () =>
-  displayTemples(temples.filter(t => parseInt(t.dedicated) < 1900))
-);
-document.querySelector("#new").addEventListener("click", () =>
-  displayTemples(temples.filter(t => parseInt(t.dedicated) > 2000))
-);
-document.querySelector("#large").addEventListener("click", () =>
-  displayTemples(temples.filter(t => t.area > 90000))
-);
-document.querySelector("#small").addEventListener("click", () =>
-  displayTemples(temples.filter(t => t.area < 10000))
-);
 
 // -----------------------------------------------
 // FOOTER DATE + LAST MODIFIED
