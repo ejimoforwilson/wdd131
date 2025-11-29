@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="styles/form.css">
     <script src="scripts/form.js" defer></script>
 </head>
+
 <body>
-    <form id="reviewForm">
-        <h2>Submit Your Review</h2>
+    <header class="mics">
+        <h1>product review </h1>
+    
+    </header>
+    <form id="reviewForm" class="noth">
+        <h2>product name</h2>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -35,5 +40,9 @@
     <div id="submittedReviews">
         <h3>Submitted Reviews</h3>
     </div>
+    <footer>
+    <p>&copy; <span id="year"></span> Ejimofor Wilson</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>

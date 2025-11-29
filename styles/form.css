@@ -3,16 +3,30 @@ body {
     padding: 20px;
     background-color: #f4f4f4;
 }
-
+* {
+  box-sizing: border-box;
+}
 form {
-    background-color: #fff;
+    background-color:plum;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     max-width: 400px;
     margin: auto;
+    display: block;
 }
-
+.noth{
+    background-color: black;
+    color: white;
+    margin: 0px;
+    padding:0px;
+}
+.mics{
+    background-color: black;
+    color: #ccc;
+    margin: 0;
+    padding: 5px;
+}
 label {
     display: block;
     margin-top: 10px;
@@ -45,4 +59,12 @@ button:hover {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+footer {
+  text-align: center;
+  background-color: green;
+  color: purple;
+  padding: 15px;
+  margin-top: 30px;
+  border-radius: 8px;
 }
