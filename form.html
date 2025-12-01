@@ -13,6 +13,7 @@
     <header class="mics">
         <h1>Product Review</h1>
     </header>
+
     <main>
         <form id="reviewForm" action="review.html" method="get">
             <h2>Product Review Form</h2>
@@ -55,20 +56,20 @@
                 <input type="radio" id="red" name="color" value="red" required>
                 <label for="red">Red</label>
 
-                <input type="radio" id="blue" name="color" value="blue">
+                <input type="radio" id="blue" name="color" value="blue" required>
                 <label for="blue">Blue</label>
 
-                <input type="radio" id="green" name="color" value="green">
+                <input type="radio" id="green" name="color" value="green" required>
                 <label for="green">Green</label>
 
-                <input type="radio" id="yellow" name="color" value="yellow">
+                <input type="radio" id="yellow" name="color" value="yellow" required>
                 <label for="yellow">Yellow</label>
 
-                <input type="radio" id="purple" name="color" value="purple">
+                <input type="radio" id="purple" name="color" value="purple" required>
                 <label for="purple">Purple</label>
             </fieldset>
 
-            <!-- Checkboxes -->
+            <!-- Checkbox inputs -->
             <fieldset>
                 <legend>Product Features</legend>
                 <input type="checkbox" id="feature1" name="features" value="organic">
@@ -79,7 +80,14 @@
 
                 <input type="checkbox" id="feature3" name="features" value="lowSugar">
                 <label for="feature3">Low Sugar</label>
+
+                <input type="checkbox" id="feature4" name="features" value="glutenFree">
+                <label for="feature4">Gluten Free</label>
             </fieldset>
+
+            <!-- Comments textarea -->
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="5" cols="30" placeholder="Write your review here..." required></textarea>
 
             <!-- Quantity Select -->
             <label for="quantity">Quantity: <span class="required">*</span></label>
@@ -90,19 +98,4 @@
                 <option value="3">3</option>
             </select>
 
-            <!-- Submit Button -->
-            <input type="submit" value="Submit">
-        </form>
-
-        <div id="reviewCounter">
-            Total Reviews Submitted: <span id="count">0</span>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Ejimofor Wilson</p>
-        <p>Last modified: <span id="lastModified"></span></p>
-    </footer>
-</body>
-</html>
-
+            <!-- Submi
