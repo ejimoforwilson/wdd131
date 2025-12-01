@@ -1,6 +1,8 @@
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("lastModified").textContent = document.lastModified;
-// Product array
+ // ===== Footer: Year and Last Modified =====
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("lastModified").textContent = document.lastModified;
+
+// ===== Product Array =====
 const products = [
     { id: 1, name: "Coffee" },
     { id: 2, name: "Tea" },
@@ -17,20 +19,25 @@ products.forEach(product => {
     productSelect.appendChild(option);
 });
 
-// Initialize review counter from localStorage
+// ===== Initialize Review Counter from localStorage =====
 let reviewCount = parseInt(localStorage.getItem("reviewCount")) || 0;
 document.getElementById("count").textContent = reviewCount;
 
-// Handle form submission
+// ===== Handle Form Submission =====
 document.getElementById("reviewForm").addEventListener("submit", function(e) {
     e.preventDefault();
 
+    // Get form values
     const productId = document.getElementById("product").value;
     const productName = products.find(p => p.id == productId).name;
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const rating = document.getElementById("rating").value;
-    const review = document.getElementById("review").value;
+    const comments = document.getElementById("comments").value;
+
+    // Get selected features (checkboxes)
+    const featureEls = document.querySelectorAll('input[name="features"]:checked');
+    const selectedFeatures = Array.from(featureEls).map(el => el.value);
 
     // Create review card
     const reviewDiv = document.createElement("div");
@@ -38,7 +45,8 @@ document.getElementById("reviewForm").addEventListener("submit", function(e) {
         <p><strong>${name}</strong> (${email})</p>
         <p>Product: ${productName}</p>
         <p>Rating: ${rating}</p>
-        <p>${review}</p>
+        <p>Features: ${selectedFeatures.join(", ") || "None"}</p>
+        <p>Comments: ${comments}</p>
         <hr>
     `;
     document.getElementById("submittedReviews").appendChild(reviewDiv);
@@ -51,6 +59,3 @@ document.getElementById("reviewForm").addEventListener("submit", function(e) {
     // Reset form
     document.getElementById("reviewForm").reset();
 });
-const featureEls = document.querySelectorAll('input[name="features"]:checked');
-const selectedFeatures = Array.from(featureEls).map(el => el.value);
-console.log(selectedFeatures);
