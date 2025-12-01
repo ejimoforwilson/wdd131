@@ -51,3 +51,6 @@ document.getElementById("reviewForm").addEventListener("submit", function(e) {
     // Reset form
     document.getElementById("reviewForm").reset();
 });
+const featureEls = document.querySelectorAll('input[name="features"]:checked');
+const selectedFeatures = Array.from(featureEls).map(el => el.value);
+console.log(selectedFeatures);

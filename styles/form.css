@@ -99,3 +99,8 @@ footer {
 .required {
     color: red;
 }
+/* Media query for screens 600px and smaller */
+@media (max-width: 600px) {}
+    body {
+        padding: 10px;
+    }
