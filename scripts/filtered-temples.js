@@ -1,3 +1,5 @@
+console.log("JS is running!");
+
 const temples = [
   {
     templeName: "Aba Nigeria",
