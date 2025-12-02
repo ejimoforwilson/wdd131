@@ -151,4 +151,23 @@ footer {
   body {
     background-color: lightblue;
   }
+}.temple-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.temple-card img {
+  width: 100%;
+  height: auto;   /* IMPORTANT: makes images NOT cut off */
+  border-radius: 10px;
+  display: block;
+}
+#temple-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
