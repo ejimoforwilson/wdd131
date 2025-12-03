@@ -1,5 +1,3 @@
-console.log("JS is running!");
-
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -60,13 +58,12 @@ const temples = [
   // Add more temple objects here...
 ];
 
+// ===== FUNCTION TO DISPLAY TEMPLE CARDS =====
+function displayTemples(list) {
+  const container = document.getElementById("temple-container");
+  container.innerHTML = ""; // Clear previous cards
 
-// ===== FUNCTION TO CREATE TEMPLE CARDS =====
-function displayTemples(templeList) {
-  const container = document.querySelector("#temple-container");
-  container.innerHTML = ""; // Clear first
-
-  templeList.forEach(temple => {
+  list.forEach(temple => {
     const card = document.createElement("div");
     card.classList.add("temple-card");
 
@@ -82,37 +79,24 @@ function displayTemples(templeList) {
   });
 }
 
-
 // ===== SHOW ALL TEMPLES ON PAGE LOAD =====
 displayTemples(temples);
 
-
-// ===== NAVIGATION FILTERS =====
-document.querySelector("#home").addEventListener("click", () => {
-  displayTemples(temples);
+// ===== FILTER BUTTONS =====
+document.getElementById("home").addEventListener("click", () => displayTemples(temples));
+document.getElementById("old").addEventListener("click", () => {
+  displayTemples(temples.filter(t => t.dedicated.includes("18") || t.dedicated.includes("19")));
 });
-
-document.querySelector("#old").addEventListener("click", () => {
-  const oldTemples = temples.filter(t => t.dedicated.includes("19"));  
-  displayTemples(oldTemples);
+document.getElementById("new").addEventListener("click", () => {
+  displayTemples(temples.filter(t => t.dedicated.includes("20")));
 });
-
-document.querySelector("#new").addEventListener("click", () => {
-  const newTemples = temples.filter(t => t.dedicated.includes("20"));
-  displayTemples(newTemples);
+document.getElementById("large").addEventListener("click", () => {
+  displayTemples(temples.filter(t => t.area > 20000));
 });
-
-document.querySelector("#large").addEventListener("click", () => {
-  const largeTemples = temples.filter(t => t.area > 20000);
-  displayTemples(largeTemples);
+document.getElementById("small").addEventListener("click", () => {
+  displayTemples(temples.filter(t => t.area <= 20000));
 });
-
-document.querySelector("#small").addEventListener("click", () => {
-  const smallTemples = temples.filter(t => t.area < 20000);
-  displayTemples(smallTemples);
-});
-
 
 // ===== FOOTER YEAR + LAST MODIFIED =====
-document.querySelector("#year").textContent = new Date().getFullYear();
-document.querySelector("#modified").textContent = document.lastModified;
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("modified").textContent = document.lastModified;
