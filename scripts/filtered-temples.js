@@ -60,7 +60,7 @@ const temples = [
 
 // ===== FUNCTION TO DISPLAY TEMPLE CARDS =====
 function displayTemples(list) {
-  const container = document.getElementById("temples-container");
+  const container = document.getElementById("temple-container");
   container.innerHTML = ""; // Clear previous cards
 
   list.forEach(temple => {
