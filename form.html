@@ -3,105 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This is a form project which allows me to develop my skills which I have been learning">
+  <meta name="description" content="Product Review Form to practice web development skills.">
   <meta name="author" content="Ejimofor Wilson">
-  <title>Review Form</title>
+  <title>Product Review Form</title>
   <link rel="stylesheet" href="styles/form.css">
   <script src="scripts/form.js" defer></script>
 </head>
 <body>
-  <header class="mics">
+  <header>
     <h1>Product Review</h1>
   </header>
 
   <main>
-    <form id="reviewForm" action="review.html" method="get">
+    <form id="reviewForm">
       <h2>Product Review Form</h2>
 
-      <!-- Product Name Select -->
-      <label for="product">Product Name: <span class="required">*</span></label>
+      <!-- Product Name (Populated via JS) -->
+      <label for="product" class="required">Product Name</label>
       <select id="product" name="product" required>
-        <option value="" disabled selected>Select a Product ...</option>
-        <option value="product1">Product 1</option>
-        <option value="product2">Product 2</option>
-        <option value="product3">Product 3</option>
+        <option value="">Select a Product ...</option>
       </select>
 
-      <!-- Name input -->
-      <label for="name">Name: <span class="required">*</span></label>
+      <!-- Name -->
+      <label for="name" class="required">Name</label>
       <input type="text" id="name" name="name" required>
 
-      <!-- Email input -->
-      <label for="email">Email: <span class="required">*</span></label>
+      <!-- Email -->
+      <label for="email" class="required">Email</label>
       <input type="email" id="email" name="email" required>
 
-      <!-- Date input -->
-      <label for="appointment">Select a date: <span class="required">*</span></label>
-      <input type="date" id="appointment" name="appointment" required>
+      <!-- Installation Date -->
+      <label for="installDate" class="required">Date of Installation</label>
+      <input type="date" id="installDate" name="installDate" required>
 
-      <!-- Rating Select -->
-      <label for="rating">Rating: <span class="required">*</span></label>
+      <!-- Rating -->
+      <label for="rating" class="required">Rating</label>
       <select id="rating" name="rating" required>
-        <option value="" disabled selected>Select a Product ...</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
+        <option value="">Select Rating ...</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
       </select>
 
-      <!-- Radio buttons -->
-      <fieldset>
-        <legend>Favorite Color <span class="required">*</span></legend>
-        <input type="radio" id="red" name="color" value="red" required>
-        <label for="red">Red</label>
-        <input type="radio" id="blue" name="color" value="blue" required>
-        <label for="blue">Blue</label>
-        <input type="radio" id="green" name="color" value="green" required>
-        <label for="green">Green</label>
-        <input type="radio" id="yellow" name="color" value="yellow" required>
-        <label for="yellow">Yellow</label>
-        <input type="radio" id="purple" name="color" value="purple" required>
-        <label for="purple">Purple</label>
-      </fieldset>
-
-      <!-- Checkbox inputs -->
-      <fieldset>
-        <legend>Product Features</legend>
-        <input type="checkbox" id="feature1" name="features" value="organic">
-        <label for="feature1">Organic</label>
-        <input type="checkbox" id="feature2" name="features" value="fairTrade">
-        <label for="feature2">Fair Trade</label>
-        <input type="checkbox" id="feature3" name="features" value="lowSugar">
-        <label for="feature3">Low Sugar</label>
-        <input type="checkbox" id="feature4" name="features" value="glutenFree">
-        <label for="feature4">Gluten Free</label>
-      </fieldset>
-
-      <!-- Comments textarea -->
-      <label for="comments">Comments:</label>
-      <textarea id="comments" name="comments" rows="5" cols="30" placeholder="Write your review here..." required></textarea>
-
-      <!-- Quantity Select -->
-      <label for="quantity">Quantity: <span class="required">*</span></label>
-      <select id="quantity" name="quantity" required>
-        <option value="" disabled selected>Select a Product ...</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
+      <!-- Comments -->
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" rows="5" placeholder="Write your review here..."></textarea>
 
       <!-- Submit Button -->
-      <input type="submit" value="Submit">
+      <button type="submit">Submit Review</button>
     </form>
 
-    <!-- Review counter -->
+    <!-- Review Counter -->
     <div id="reviewCounter">
       Total Reviews Submitted: <span id="count">0</span>
     </div>
-
-    <!-- Submitted reviews container -->
-    <div id="submittedReviews"></div>
   </main>
 
   <footer>
