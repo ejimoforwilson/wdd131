@@ -65,6 +65,23 @@ section {
   flex-direction: column;
   gap: 20px;
 }
+/* ===== Desktop Layout ===== */
+@media (min-width: 700px) {
+  .wireframes {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .wireframes div {
+    text-align: center;
+    width: 45%;
+  }
+
+  .wireframes div img {
+    max-width: 100%;
+  }
+}
 
 .wireframes div img {
   width: 100%;

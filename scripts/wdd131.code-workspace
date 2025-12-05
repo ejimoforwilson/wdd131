@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "wdd131",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
